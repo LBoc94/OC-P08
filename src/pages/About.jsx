@@ -1,6 +1,17 @@
+import Banner from "../components/Banner";
+import AboutBannerImg from "../assets/banner-about.png"
+import Collapse from "../components/Collapse";
+
 function About() {
     return (
-      <div>About test</div>
+      <>
+      <Banner
+      bannerImg={AboutBannerImg}
+      bannerImgAlt="Photo d'un paysage"
+      // bannerTxt="Chez vous, partout et ailleurs"
+      />
+      <Collapse/>
+      </>
     );
   }
 
