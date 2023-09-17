@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.banner {
+    margin: 0px 65px;
+    height: 220px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        filter: brightness(60%);
+    }
+
+    p {
+        position: relative;
+        color: white;
+        @include font-params(3em, 700)    
+    }
+}
