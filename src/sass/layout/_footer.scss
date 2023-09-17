@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+footer {
+    height: 200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    justify-items: center;
+
+    img {
+        height: 35px;
+        align-self: center;
+    }
+
+    p {
+        font-size: 1.5em;
+        align-self: start;
+    }
+}

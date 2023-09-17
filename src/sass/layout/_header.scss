@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 60px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+nav a {
+    color: $main-color;
+    font-size: 1.5em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+}
+
+.header-logo {
+    height: 3.5em;
+}
+
+// TO NEST + see height

@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+#error-message {
+    color: $main-color;
+    text-align: center;
+
+    span {
+        @include font-params(18em, 900)
+    }
+
+    div {
+        @include font-params(2.2em, 700)
+    }
+
+    a {
+        @include font-params(1.1em, 700);
+        display: block;
+        margin: 50px 0;
+        color: $main-color;
+    }
+}
