@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.tag {
+    height: fit-content;
+    width: fit-content;
+    min-width: 115px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: $main-color;
+    @include font-params(0.8em, 400);
+    text-align:center;
+}

@@ -8,7 +8,6 @@ function About() {
       <Banner
       bannerImg={AboutBannerImg}
       bannerImgAlt="Photo d'un paysage"
-      // bannerTxt="Chez vous, partout et ailleurs"
       />
       <Collapse/>
       </>
