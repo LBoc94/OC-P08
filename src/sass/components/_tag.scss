@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+.lgmt-tags {
+    gap: 5px;
+}
+
 .tag {
     height: fit-content;
     width: fit-content;
@@ -10,4 +14,6 @@
     background-color: $main-color;
     @include font-params(0.8em, 400);
     text-align:center;
+    margin: 20px 0;
+    cursor: pointer;
 }

@@ -5,5 +5,31 @@
     color: $main-color;
 }
 
-// .lgmt-infos {
-// }
+.lgmt-infos {
+
+    h1 {
+        @include font-params(2.25em, 700);
+        margin: 25px 0 3px 0;
+    }
+
+    h2 {
+        @include font-params(1.1em, 600);
+    }
+}
+
+.lgmt-host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    img{
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+    }
+
+    div {
+        @include font-params(1.1em, 400);
+    }
+}
