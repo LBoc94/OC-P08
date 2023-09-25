@@ -2,3 +2,8 @@
     font-size: $size;
     font-weight: $weight;
 }
+
+@mixin arrow-rotation($deg) {
+    transform: rotate($deg);
+    transition: transform 500ms ease-in-out;
+}

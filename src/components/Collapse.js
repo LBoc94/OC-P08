@@ -1,6 +1,24 @@
-function Collapse() {
+import { useState } from "react"
+
+function Collapse({title, content}) {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <p>collapse à faire</p>
+        <div className="collapse">
+
+            <div className="collapse-frame">
+                <div className="collapse-title">{title}</div>
+                <span onClick={handleClick} className={isOpen ? "collapse-arrow arrow-open" : "collapse-arrow arrow-closed"}><i class="fa-solid fa-angle-up"></i></span>
+            </div>
+
+            <div className={isOpen ? "wrapper-open" : "wrapper-closed"}>
+            <div className={isOpen ? "collapse-content collapse-content-open" : "collapse-content collapse-content-closed"}>{content}</div></div>
+        </div>
     )
 }
 

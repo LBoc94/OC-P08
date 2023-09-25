@@ -1,6 +1,14 @@
-function Rating() {
+function Rating({rating}) {
+
+    const stars = [1, 2, 3, 4, 5];
+
     return (
-        <p>rating à faire</p>
+        <>
+            {stars.map((star) =>
+                rating >= star ? (<i className="fa-solid fa-star"></i>)
+                : (<i className="fa-solid fa-star star-inactive"></i>)
+                )}
+        </>
     )
 }
 

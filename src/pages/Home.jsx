@@ -2,8 +2,49 @@ import React from "react";
 import Banner from "../components/Banner";
 import HomeBannerImg from "../assets/banner-home.png"
 import Card from "../components/Card";
+import {useState,useEffect} from 'react';
 
 function Home() {
+
+  // const [data,setData]=useState([]);
+
+  // const getData=()=>{
+  //   fetch('data.json'
+  //   ,{
+  //     headers : { 
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json'
+  //      }
+  //   }
+  //   )
+  //     .then(function(response){
+  //       console.log(response)
+  //       return response.json();
+  //     })
+  //     .then(function(myJson) {
+  //       console.log(myJson);
+  //       setData(myJson)
+  //     });
+  // }
+
+  // useEffect(()=>{
+  //   getData()
+  // },[])
+
+  const [data, setData] = useState([]);
+    
+    useEffect(() => {
+        fetch('data.json', {
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+             }
+      
+          }).then(res => res.json())
+            .then(result => setData(result));
+    }, [data])
+
+
     return (
         <>
             <Banner
@@ -13,30 +54,15 @@ function Home() {
             
             <section className="home-card-section">
 
-            <Card
-            cardImg={HomeBannerImg}
-            cardAlt="Photo d'un logement"
-            cardTitle="à remplacer"/>
+            {data.map((lgmt) => (
+              <Card key={lgmt.id}
+              cardImg={lgmt.cover}
+              cardAlt={lgmt.title}
+              cardId={lgmt.id}
+              cardTitle={lgmt.title}/>
+              ))}
 
-<Card
-            cardImg={HomeBannerImg}
-            cardAlt="Photo d'un logement"
-            cardTitle="à remplacer"/>
-
-<Card
-            cardImg={HomeBannerImg}
-            cardAlt="Photo d'un logement"
-            cardTitle="à remplacer"/>
-
-<Card
-            cardImg={HomeBannerImg}
-            cardAlt="Photo d'un logement"
-            cardTitle="à remplacer"/>
-
-
-
-                    </section>
-
+            </section>
         </>
     );
   }
