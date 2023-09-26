@@ -13,7 +13,7 @@ function Collapse({title, content}) {
 
             <div className="collapse-frame">
                 <div className="collapse-title">{title}</div>
-                <span onClick={handleClick} className={isOpen ? "collapse-arrow arrow-open" : "collapse-arrow arrow-closed"}><i class="fa-solid fa-angle-up"></i></span>
+                <span onClick={handleClick} className={isOpen ? "collapse-arrow arrow-open" : "collapse-arrow arrow-closed"}><i className="fa-solid fa-angle-up"></i></span>
             </div>
 
             <div className={isOpen ? "wrapper-open" : "wrapper-closed"}>
