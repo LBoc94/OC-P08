@@ -8,5 +8,13 @@
 }
 
 .lgmt-carrousel .fa-solid {
-    font-size: 60px;
+    font-size: 100px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+}
+
+.carrousel-slide-number {
+    font-size: 20px;
 }

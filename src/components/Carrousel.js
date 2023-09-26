@@ -58,7 +58,7 @@ export default function Carrousel({ pictures }) {
     const off = pictures.length === 1 ? "carrouselOff" : null;
 
     return (
-        <div className="carrousel">
+        <>
             <span
                 className={`carrousel-arrow-left ${off}`}
                 onClick={previousSlide}
@@ -66,7 +66,7 @@ export default function Carrousel({ pictures }) {
                 <i className="fa-solid fa-angle-left"></i>
             </span>
 
-            <img src={pictures[currentSlide]} alt="Logement" />
+            <img src={pictures[currentSlide]} alt="Logement" className="carrousel-img"/>
 
             <span
                 className={`carrousel-arrow-right ${off}`}
@@ -79,6 +79,6 @@ export default function Carrousel({ pictures }) {
                     {currentSlide + 1}/{pictures.length}
                 </p>
             </div>
-        </div>
+        </>
     );
 }
