@@ -2,11 +2,13 @@ import { useState } from "react"
 
 function Collapse({title, content}) {
 
+        // recherche si le collapse est ouvert
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
         setIsOpen(!isOpen);
     };
+
 
     return (
         <div className="collapse">
@@ -19,6 +21,7 @@ function Collapse({title, content}) {
             <div className={isOpen ? "wrapper-open" : "wrapper-closed"}>
                 <div className={isOpen ? "collapse-content collapse-content-open" : "collapse-content collapse-content-closed"}>{content}</div>
             </div>
+            
         </div>
     )
 }
