@@ -1,20 +1,71 @@
+@use "../abstracts/" as *;
+
 .carrousel-img {
-    // margin: 50px 5%;
     height: 415px;
     width: 100%;
     border-radius: 25px;
     object-fit: cover;
     grid-area: 1 / 1 / 2 / 3;
+
+    @include mobile {
+        height: 255px;
+    }
+}
+
+.lgmt-carrousel {
+    color: white;
 }
 
 .lgmt-carrousel .fa-solid {
     font-size: 100px;
-    color: white;
     cursor: pointer;
+    padding: 0 15px 0 15px;
+
+    @include tablet {
+        font-size: 60px;
+    }
+
+    @include mobile {
+        font-size: 40px;
+    }
+}
+
+.arrows-container {
     position: absolute;
-    top: 45%;
+    height: 415px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+
+    @include mobile {
+        height: 255px;
+    }
+
 }
 
 .carrousel-slide-number {
-    font-size: 20px;
+    // font-size: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 415px;
+    width: 90%;
+    align-items: flex-end;
+    // top: 48%;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    @include font-params(1.3em, 700);
+    padding-bottom: 15px;
+
+    @include mobile {
+        height: 260px;
+        @include font-params(1em, 700);
+    }
+
+}
+
+.carrousel-hidden {
+    display: none;
 }

@@ -1,8 +1,19 @@
+@use "../abstracts/" as *;
+
 .lgmt-rating {
     display: flex;
     justify-self: end;
     font-size: 25px;
     gap: 10px;
+
+    @include tablet {
+        font-size: 22px;
+        justify-self: left;
+    }
+
+    @include mobile {
+        font-size: 17px;
+    }
 }
 
 .star-inactive {

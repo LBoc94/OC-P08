@@ -5,15 +5,53 @@
     color: $main-color;
 }
 
+#lgmt-page .collapse {
+    width: 90%;
+
+    @include tablet {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    @include mobile {
+        margin-bottom: 0px;
+    }
+
+}
+
+.lgmt-equipements  {
+    display: flex;
+    justify-content: flex-end;
+    align-self: start;
+}
+
+.lgmt-description {
+    align-self: start;
+}
+
 .lgmt-infos {
 
     h1 {
         @include font-params(2.25em, 700);
         margin: 25px 0 3px 0;
+
+        @include tablet {
+            @include font-params(2em, 700)
+        }   
+
+        @include mobile {
+            @include font-params(1.6em, 700)
+        }    
     }
 
     h2 {
         @include font-params(1.1em, 600);
+        margin-bottom: 15px;
+
+        @include mobile {
+            @include font-params(1em, 500);
+            margin-top: 10px;
+        }    
     }
 }
 
@@ -27,9 +65,30 @@
         width: 65px;
         height: 65px;
         border-radius: 50%;
+
+        @include mobile {
+            width: 50px;
+            height: 50px;
+            }    
     }
 
-    div {
-        @include font-params(1.1em, 400);
+    @include tablet {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    // div {
+    //     @include font-params(1.1em, 400);
+    // }
+}
+
+.lgmt-host-name {
+    word-spacing: 1000px;
+    text-align: end;
+    padding-right: 15px;
+    @include font-params(1.1em, 600);
+
+    @include mobile {
+        @include font-params(0.9, 600);
     }
 }

@@ -9,8 +9,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 function Logement() {
 
-const navigate = useNavigate ()
-
+  const navigate = useNavigate ()
   const { id } = useParams();
   const [logement, setLogement] = useState({host:{}, tags:[] ,equipments:[], rating:[] , pictures:[]});
   
@@ -45,7 +44,7 @@ const navigate = useNavigate ()
         </div>
 
         <div className="lgmt-host">
-          <div>{logement.host.name}</div>
+          <div className="lgmt-host-name">{logement.host.name}</div>
           <img src={logement.host.picture} alt="Profil du propriétaire"/>
         </div>
 

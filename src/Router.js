@@ -7,13 +7,12 @@ import Error from "./pages/Error";
 const Router = () => {
   return (
     <>
-
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/logement/:id" element={<Logement />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={< Home />} />
+        <Route path="/about" element={< About />} />
+        <Route path="/logement/:id" element={< Logement />} />
+        <Route path="*" element={< Error />} />
+      </Routes>
     </>
   )
 }

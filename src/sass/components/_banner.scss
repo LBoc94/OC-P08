@@ -21,6 +21,11 @@
     p {
         position: relative;
         color: white;
-        @include font-params(3em, 700)    
+        @include font-params(3em, 700);
+        padding: 5%;
+
+        @include mobile {
+            font-size: 2.3em;
+        }
     }
 }

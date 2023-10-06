@@ -17,7 +17,8 @@ function Collapse({title, content}) {
             </div>
 
             <div className={isOpen ? "wrapper-open" : "wrapper-closed"}>
-            <div className={isOpen ? "collapse-content collapse-content-open" : "collapse-content collapse-content-closed"}>{content}</div></div>
+                <div className={isOpen ? "collapse-content collapse-content-open" : "collapse-content collapse-content-closed"}>{content}</div>
+            </div>
         </div>
     )
 }

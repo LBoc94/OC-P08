@@ -1,3 +1,33 @@
+// BREAKPOINTS //
+@mixin mobile {
+    @media (max-width: 481px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 729px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin wide {
+    @media (max-width: 1920px) {
+        @content;
+    }
+}
+
+// @mixin card-grid-columns($repeatnb, $repeatpc) {
+//     grid-template-columns: repeat($repeatnb, $repeatpc);
+// }
+
+
 @mixin font-params($size, $weight) {
     font-size: $size;
     font-weight: $weight;

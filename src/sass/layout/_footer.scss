@@ -9,13 +9,25 @@ footer {
     grid-template-rows: 80% 20%;
     justify-items: center;
 
+    @include mobile {
+        grid-template-rows: 60% 40%;
+    }
+
     img {
         height: 35px;
         align-self: center;
+
+        @include mobile {
+            height: 65px;
+        }    
     }
 
     p {
         font-size: 1.5em;
         align-self: start;
+
+        @include mobile {
+            width: 200px;
+        }    
     }
 }

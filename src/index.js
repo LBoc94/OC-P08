@@ -11,10 +11,12 @@ import "./sass/style.scss"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-            <BrowserRouter>
-              <Header />
-              <Router />
-              <Footer />
-            </BrowserRouter>
+
+      <BrowserRouter>
+          <Header />
+          <Router />
+          <Footer />
+      </BrowserRouter>
+      
   </React.StrictMode>
 );
