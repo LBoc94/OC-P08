@@ -1,36 +1,15 @@
 @use "../abstracts/" as *;
 
+
+// GENERAL //
 #lgmt-page {
     margin: 50px 5%;
     color: $main-color;
 }
 
-#lgmt-page .collapse {
-    width: 90%;
 
-    @include tablet {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    @include mobile {
-        margin-bottom: 0px;
-    }
-
-}
-
-.lgmt-equipements  {
-    display: flex;
-    justify-content: flex-end;
-    align-self: start;
-}
-
-.lgmt-description {
-    align-self: start;
-}
-
+// LOGEMENTS INFOS //
 .lgmt-infos {
-
     h1 {
         @include font-params(2.25em, 700);
         margin: 25px 0 3px 0;
@@ -55,6 +34,8 @@
     }
 }
 
+
+// HOST INFOS //
 .lgmt-host {
     display: flex;
     flex-direction: row;
@@ -76,10 +57,6 @@
         margin-top: 20px;
         margin-bottom: 10px;
     }
-
-    // div {
-    //     @include font-params(1.1em, 400);
-    // }
 }
 
 .lgmt-host-name {
@@ -91,4 +68,30 @@
     @include mobile {
         @include font-params(0.9, 600);
     }
+}
+
+
+// COLLAPSE //
+#lgmt-page .collapse {
+    width: 90%;
+
+    @include tablet {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    @include mobile {
+        margin-bottom: 0px;
+    }
+
+}
+
+.lgmt-description {
+    align-self: start;
+}
+
+.lgmt-equipements  {
+    display: flex;
+    justify-content: flex-end;
+    align-self: start;
 }

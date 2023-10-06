@@ -1,14 +1,15 @@
 @use "../abstracts/" as *;
 
 .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 50px 5%;
     height: 220px;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 
     img {
         height: 100%;
@@ -18,6 +19,7 @@
         filter: brightness(60%);
     }
 
+    
     p {
         position: relative;
         color: white;

@@ -1,5 +1,7 @@
 @use "_mixins" as *;
 
+
+// GRID PAGE LOGEMENT//
 #lgmt-page {
     display: grid;
     grid-template-columns: repeat(2, 50%);

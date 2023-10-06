@@ -1,4 +1,4 @@
-// BREAKPOINTS //
+// BREAKPOINTS RESPONSIVE //
 @mixin mobile {
     @media (max-width: 481px) {
         @content;
@@ -23,16 +23,15 @@
     }
 }
 
-// @mixin card-grid-columns($repeatnb, $repeatpc) {
-//     grid-template-columns: repeat($repeatnb, $repeatpc);
-// }
 
-
+// PARAMETRES FONTS //
 @mixin font-params($size, $weight) {
     font-size: $size;
     font-weight: $weight;
 }
 
+
+// ANIMATION ARROWS CARROUSEL //
 @mixin arrow-rotation($deg) {
     transform: rotate($deg);
     transition: transform 500ms ease-in-out;

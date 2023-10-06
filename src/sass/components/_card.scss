@@ -5,26 +5,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    // @include card-grid-columns(4, 23%);
-
     row-gap: 30px;
     column-gap: 30px;
     margin: 50px 5%;
-    background-color: $background-color;
     border-radius: 25px;
     padding: 3%;
-
-
-    @include desktop {
-        // @include card-grid-columns(3, 30%);
-    }   
-
-    @include tablet {
-        // @include card-grid-columns(2, 45%);
-    }
+    background-color: $background-color;
 
     @include mobile {
-        // @include card-grid-columns(1, 100%);
         background-color: initial;
         padding: initial;
     }
@@ -37,32 +25,31 @@
     overflow: hidden;
     cursor: pointer;
 
-
-
-    @media (max-width: 765px) {
-        width: 100%;
-    }
-
+    
     img {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
 
+
     h2 {
         position: relative;
         padding: 20px 20px 50px 20px;
         bottom: 90px;
         color: white;
-        @include font-params(1.2em, 500);
         background: linear-gradient(transparent, 30%, rgb(81, 81, 81));
+        @include font-params(1.2em, 500);
 
-        @include tablet {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            padding: 20px 10px 50px 10px;
-        }
+            @include tablet {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 20px 10px 50px 10px;
+            }
         }
 
+    @media (max-width: 765px) {
+        width: 100%;
+    }
 }

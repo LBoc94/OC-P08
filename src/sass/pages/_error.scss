@@ -5,13 +5,16 @@
     text-align: center;
     margin: 50px 0 70px 0;
 
+    
     span {
         @include font-params(18em, 900)
     }
 
+
     div {
         @include font-params(2.2em, 700)
     }
+
 
     a {
         @include font-params(1.1em, 700);
@@ -19,9 +22,9 @@
         margin: 50px 0;
         color: $main-color;
 
+
         &:hover {
             text-decoration: underline;
         }
-
     }
 }

@@ -27,8 +27,8 @@ nav a {
         }
 
         @include mobile {
-        text-transform: uppercase;
-        font-size: 1.2em;        
+            text-transform: uppercase;
+            font-size: 1.2em;        
         }
 }
 
@@ -39,5 +39,3 @@ nav a {
         padding-right: 25px;
     }
 }
-
-// TO NEST + see height
