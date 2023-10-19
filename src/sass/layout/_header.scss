@@ -22,9 +22,9 @@ nav a {
     color: $main-color;
     font-size: 1.5em;
 
-        &:hover {
-            text-decoration: underline;
-        }
+        // &:active {
+        //     text-decoration: underline;
+        // }
 
         @include mobile {
             text-transform: uppercase;
@@ -38,4 +38,9 @@ nav a {
     @include mobile {
         padding-right: 25px;
     }
+}
+
+.tab-active {
+    text-decoration: underline !important;
+
 }

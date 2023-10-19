@@ -7,12 +7,30 @@
 
     
     span {
-        @include font-params(18em, 900)
+        @include font-params(18em, 900);
+
+        @include tablet {
+            @include font-params(13em, 900)
+        };
+    
+        @include mobile {
+            @include font-params(8em, 900)
+        }
     }
 
 
     div {
-        @include font-params(2.2em, 700)
+        @include font-params(2.2em, 700);
+
+        @include tablet {
+            padding: 0 10px 0 10px;
+            @include font-params(1.6em, 900)
+        };
+
+        @include mobile {
+            padding: 0 5px 0 5px;
+            @include font-params(1.1em, 900)
+        }
     }
 
 
@@ -25,6 +43,14 @@
 
         &:hover {
             text-decoration: underline;
+        };
+
+        @include tablet {
+            padding: 0 10px 0 10px;
+        };
+
+        @include mobile {
+            @include font-params(0.9em, 900)
         }
     }
 }

@@ -8,8 +8,8 @@ function Header() {
             
             <nav>
                 <ul>
-                    <li><NavLink to="/">Accueil</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/" style={({ isActive }) => ({textDecoration: isActive ? 'underline' : 'none'})}>Accueil</NavLink></li>
+                    <li><NavLink to="/about" style={({ isActive }) => ({textDecoration: isActive ? 'underline' : 'none'})}>About</NavLink></li>
                 </ul>
             </nav>
         </header>
